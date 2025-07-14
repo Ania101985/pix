@@ -22,7 +22,7 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Video en lugar de imagen */}
+        {/* Video   en lugar de imagen */}
         <div className="lg:w-1/2 flex justify-center">
           <video
             src="/videos/pix-chaos.mp4"
