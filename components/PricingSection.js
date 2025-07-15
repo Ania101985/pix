@@ -2,7 +2,7 @@ export default function PricingSection() {
   const plans = [
     {
       name: "Explorador",
-      price: "€19/mes",
+      price: "€30/mes",
       description: "Comienza tu aventura con lo esencial",
       color: "from-yellow-400 to-orange-300",
       benefits: [
