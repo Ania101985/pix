@@ -1,89 +1,78 @@
-import Image from "next/image";
+'use client';
+import { useRef, useState, useEffect } from 'react';
+import Image from 'next/image';
 
 const pixItems = [
-  {
-    name: "SCRATCHJR",
-    img: "/images/pixlabel2/pixlabel1.png",
-    style: { top: "79%", left: "35%" },
-  },
-  {
-    name: "SCRATCH INTERMEDIO",
-    img: "/images/pixlabel2/pixlabel2.png",
-    style: { top: "57%", left: "57%" },
-  },
-  {
-    name: "ALFABETIZACIÓN DIGITAL",
-    img: "/images/pixlabel2/pixlabel3.png",
-    style: { top: "82%", left: "55%" },
-  },
-  {
-    name: "MAKECODE ARCADE",
-    img: "/images/pixlabel2/pixlabel4.png",
-    style: { top: "16%", left: "62%" },
-  },
-  {
-    name: "APP INVENTOR",
-    img: "/images/pixlabel2/pixlabel5.png",
-    style: { top: "40%", left: "83%" },
-  },
-  {
-    name: "HTML & CSS",
-    img: "/images/pixlabel2/pixlabel6.png",
-    style: { top: "30%", left: "32%" },
-  },
-  {
-    name: "PYTHON",
-    img: "/images/pixlabel2/pixlabel7.png",
-    style: { top: "72%", left: "75%" },
-  },
-  {
-    name: "JAVASCRIPT",
-    img: "/images/pixlabel2/pixlabel8.png",
-    style: { top: "40%", left: "13%" },
-  },
-  {
-    name: "SCRATCH BÁSICO",
-    img: "/images/pixlabel2/pixlabel9.png",
-    style: { top: "49%", left: "39%" },
-  },
+  { name: 'SCRATCHJR', img: '/images/pixlabel2/pixlabel1.png', top: 0.79, left: 0.35 },
+  { name: 'SCRATCH INTERMEDIO', img: '/images/pixlabel2/pixlabel2.png', top: 0.57, left: 0.57 },
+  { name: 'ALFABETIZACIÓN DIGITAL', img: '/images/pixlabel2/pixlabel3.png', top: 0.82, left: 0.55 },
+  { name: 'MAKECODE ARCADE', img: '/images/pixlabel2/pixlabel4.png', top: 0.16, left: 0.62 },
+  { name: 'APP INVENTOR', img: '/images/pixlabel2/pixlabel5.png', top: 0.40, left: 0.83 },
+  { name: 'HTML & CSS', img: '/images/pixlabel2/pixlabel6.png', top: 0.30, left: 0.32 },
+  { name: 'PYTHON', img: '/images/pixlabel2/pixlabel7.png', top: 0.72, left: 0.75 },
+  { name: 'JAVASCRIPT', img: '/images/pixlabel2/pixlabel8.png', top: 0.40, left: 0.13 },
+  { name: 'SCRATCH BÁSICO', img: '/images/pixlabel2/pixlabel9.png', top: 0.49, left: 0.39 },
 ];
 
 export default function MapWithPix() {
+  const imageRef = useRef(null);
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
+
+  useEffect(() => {
+    const updateSize = () => {
+      if (imageRef.current) {
+        setDimensions({
+          width: imageRef.current.clientWidth,
+          height: imageRef.current.clientHeight,
+        });
+      }
+    };
+
+    updateSize();
+    window.addEventListener('resize', updateSize);
+    return () => window.removeEventListener('resize', updateSize);
+  }, []);
+
   return (
-    <div className="relative w-full aspect-[9/16] sm:aspect-[3/4] lg:aspect-[3/2] overflow-hidden font-sans my-16">
+    <div className="relative w-full max-w-6xl mx-auto my-16">
       <img
+        ref={imageRef}
         src="/map2aa.png"
         alt="Mapa Pix"
-        className="w-full h-full object-contain"
+        className="w-full h-auto"
+        onLoad={() => {
+          if (imageRef.current) {
+            setDimensions({
+              width: imageRef.current.clientWidth,
+              height: imageRef.current.clientHeight,
+            });
+          }
+        }}
       />
 
-      {pixItems.map((pix, index) => (
-        <div
-          key={index}
-          className="absolute flex flex-col items-center z-30"
-          style={{
-            top: pix.style.top,
-            left: pix.style.left,
-            transform: "translate(-50%, -50%)",
-          }}
-        >
-          {/* Course Label */}
+      {dimensions.width > 0 &&
+        pixItems.map((pix, i) => (
           <div
-            className="flex items-center justify-center text-white font-bold text-center border-white border-[2px] rounded-lg drop-shadow-lg px-2 py-1 leading-tight text-xs sm:text-sm md:text-base max-w-[160px] bg-black/70"
+            key={i}
+            className="absolute flex flex-col items-center z-30"
+            style={{
+              top: pix.top * dimensions.height,
+              left: pix.left * dimensions.width,
+              transform: 'translate(-50%, -50%)',
+            }}
           >
-            {pix.name}
+            <div className="text-white font-bold text-center border-white border-2 rounded-lg drop-shadow-md px-2 py-1 text-[11px] sm:text-sm bg-black/70 max-w-[110px] leading-tight">
+              {pix.name}
+            </div>
+            <Image
+              src={pix.img}
+              alt={pix.name}
+              width={60}
+              height={60}
+              className="-mt-2"
+            />
           </div>
-
-          {/* Pix Image */}
-          <Image
-            src={pix.img}
-            alt={pix.name}
-            width={100}
-            height={100}
-            className="-mt-2"
-          />
-        </div>
-      ))}
+        ))}
     </div>
   );
 }
