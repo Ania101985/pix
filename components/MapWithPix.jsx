@@ -15,16 +15,19 @@ const pixItems = [
 
 export default function MapWithPix() {
   return (
-    <div className="relative w-full max-w-7xl mx-auto my-16 px-4">
-      {/* Map image */}
-      <img
-        src="/map2aa.png"
-        alt="Mapa Pix"
-        className="w-full h-auto block"
-      />
+    <div className="relative w-full max-w-7xl mx-auto px-4 my-16">
+      {/* Aspect Ratio Wrapper */}
+      <div className="relative w-full aspect-[9/16] sm:aspect-[3/2]">
+        {/* Map image */}
+        <Image
+          src="/map2aa.png"
+          alt="Mapa Pix"
+          fill
+          className="object-contain"
+          priority
+        />
 
-      {/* Pix overlays */}
-      <div className="absolute inset-0">
+        {/* Overlay Items */}
         {pixItems.map((pix, index) => (
           <div
             key={index}
@@ -35,7 +38,6 @@ export default function MapWithPix() {
               transform: 'translate(-50%, -50%)',
             }}
           >
-            {/* Label */}
             <div
               className="bg-black/70 text-white font-semibold text-center border border-white rounded-lg px-3 py-1 drop-shadow-md whitespace-nowrap"
               style={{
@@ -46,7 +48,6 @@ export default function MapWithPix() {
               {pix.name}
             </div>
 
-            {/* Pix character image */}
             <Image
               src={pix.img}
               alt={pix.name}
