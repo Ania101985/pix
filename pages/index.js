@@ -11,6 +11,7 @@ import AchievementsSection from '@/components/AchievementsSection';
 import FAQSection from '@/components/FAQSection';
 import Footer from '@/components/Footer';
 import courses from '@/data/courses';
+import MapWithPix from '@/components/MapWithPix'; // 👈 nuevo componente
 
 export default function Home() {
   return (
@@ -31,7 +32,10 @@ export default function Home() {
         <Hero />
         <HowItWorks />
 
-        {/* Cursos */}
+        {/* 🗺️ Mapa con Pix */}
+        <MapWithPix />
+
+        {/* 🧠 Cursos */}
         <section id="cursos" className="py-20 px-6 bg-white">
           <h2 className="text-4xl md:text-5xl font-extrabold text-center text-purple-700 mb-12 drop-shadow-sm">
             Nuestros Cursos
