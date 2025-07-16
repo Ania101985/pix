@@ -6,76 +6,62 @@
 /* ───── Global Reset & Base Styles ────────────────── */
 html,
 body {
-  /* Eliminate the default 8 px margin that caused the white gap */
   margin: 0;
   padding: 0;
-
-  /* Prevent sideways scroll on mobile */
   overflow-x: hidden;
-
-  /* Smooth in-page scrolling for anchor links */
   scroll-behavior: smooth;
-
-  /* Base font for the whole app */
   font-family: 'Inter', sans-serif;
 }
 
 body {
-  /* Tailwind helpers via @apply for clarity */
   @apply text-gray-800 bg-white antialiased;
 }
 
 /* ───── Layout Helpers ────────────────────────────── */
-/* Full-screen map area that accounts for a ~80 px navbar */
 .map-page-container {
-  padding-top: 80px;              /* adjust if navbar height changes */
-  height: calc(100vh - 80px);     /* or use 100svh in modern browsers */
+  padding-top: 80px;
+  height: calc(100vh - 80px);
   width: 100%;
   position: relative;
   overflow: hidden;
 }
 
 /* ───── Animations ─────────────────────────────────── */
-/* Wiggle */
 @keyframes wiggle {
   0%, 100% { transform: rotate(-1deg); }
-  50%       { transform: rotate(1deg);  }
+  50% { transform: rotate(1deg); }
 }
 .animate-wiggle {
   animation: wiggle 2s ease-in-out infinite;
 }
 
-/* Fade-up */
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(30px); }
-  to   { opacity: 1; transform: translateY(0);    }
+  to   { opacity: 1; transform: translateY(0); }
 }
 .animate-fade-up {
   animation: fade-up 0.8s ease-out both;
 }
 
-/* Zoom-in */
 @keyframes zoom-in {
   from { transform: scale(0.9); opacity: 0; }
-  to   { transform: scale(1);   opacity: 1; }
+  to   { transform: scale(1); opacity: 1; }
 }
 .animate-zoom-in {
   animation: zoom-in 0.5s ease-in-out both;
 }
 
-/* Slide-in left */
 @keyframes slide-in-left {
   from { transform: translateX(-50px); opacity: 0; }
-  to   { transform: translateX(0);     opacity: 1; }
+  to   { transform: translateX(0); opacity: 1; }
 }
 .animate-slide-in-left {
   animation: slide-in-left 0.6s ease-out both;
 }
 
-/* Slide-in right */
 @keyframes slide-in-right {
   from { transform: translateX(50px); opacity: 0; }
-  to   { transform: translateX(0);    opacity: 1; }
+  to   { transform: translateX(0); opacity: 1; }
 }
 .animate-slide-in-right {
   animation: slide-in-right 0.6s ease-out both;
@@ -117,4 +103,12 @@ body {
 
 .card-glow:hover {
   box-shadow: 0 0 25px rgba(255, 255, 255, 0.4);
+}
+
+/* ───── Responsive Font for Map Labels ─────────────── */
+@media (orientation: portrait) {
+  .map-label {
+    font-size: 10px !important;
+    max-width: 100px;
+  }
 }
