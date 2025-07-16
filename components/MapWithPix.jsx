@@ -1,4 +1,3 @@
-// components/MapWithPix.js
 import Image from 'next/image';
 
 const pixItems = [
@@ -51,11 +50,11 @@ const pixItems = [
 
 export default function MapWithPix() {
   return (
-    <div className="relative w-full h-[800px] sm:h-[1000px] overflow-hidden font-sans my-16">
+    <div className="relative w-full h-[calc(100svh-64px)] sm:h-[calc(100vh-80px)] overflow-hidden font-sans">
       <img
         src="/map2aa.png"
         alt="Mapa Pix"
-        className="w-full h-full object-cover"
+        className="absolute top-0 left-0 w-full h-full object-cover z-10"
       />
 
       {pixItems.map((pix, index) => (
