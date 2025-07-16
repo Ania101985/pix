@@ -28,8 +28,10 @@ export default function Home() {
 
       <Navbar />
 
-      <main className="pt-20 bg-white text-gray-800">
+      {/* ✅ Adjusted pt-12 to fix white space below navbar */}
+      <main className="pt-12 bg-white text-gray-800">
         <Hero />
+
         <HowItWorks />
 
         {/* 🗺️ Mapa con Pix */}

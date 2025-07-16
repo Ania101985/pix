@@ -2,10 +2,11 @@
 
 export default function Hero() {
   return (
-    <section className="relative bg-gradient-to-r from-purple-600 via-pink-500 to-yellow-400 text-white py-20 px-6 overflow-hidden">
+    <section className="relative -mt-10 bg-gradient-to-r from-purple-600 via-pink-500 to-yellow-400 text-white py-20 px-6 overflow-hidden">
+      {/* Content Container */}
       <div className="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12">
         
-        {/* Texto */}
+        {/* Text Section */}
         <div className="lg:w-1/2 text-center lg:text-left">
           <h1 className="text-5xl lg:text-6xl font-extrabold mb-6 leading-tight drop-shadow-lg">
             Aprende programación <br />{" "}
@@ -22,7 +23,7 @@ export default function Hero() {
           </a>
         </div>
 
-        {/* Video   en lugar de imagen */}
+        {/* Video Section */}
         <div className="lg:w-1/2 flex justify-center">
           <video
             src="/videos/pix-chaos.mp4"
@@ -35,7 +36,7 @@ export default function Hero() {
         </div>
       </div>
 
-      {/* Fondo decorativo */}
+      {/* Decorative Background Pattern */}
       <div className="absolute inset-0 bg-[url('/images/hero-pattern.svg')] opacity-10 pointer-events-none"></div>
     </section>
   );
