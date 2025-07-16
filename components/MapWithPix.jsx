@@ -51,11 +51,11 @@ const pixItems = [
 
 export default function MapWithPix() {
   return (
-    <section className="relative w-full aspect-[3/4] sm:aspect-[16/9] my-12 overflow-hidden">
+    <section className="relative w-full h-[90vh] sm:h-[70vh] my-12 overflow-hidden">
       <img
         src="/map2aa.png"
         alt="Mapa Pix"
-        className="absolute inset-0 w-full h-full object-cover z-0"
+        className="absolute inset-0 w-full h-full object-contain z-0"
       />
 
       {pixItems.map((pix, index) => (
@@ -68,18 +68,16 @@ export default function MapWithPix() {
             transform: 'translate(-50%, -50%)',
           }}
         >
-          <div
-            className="bg-black bg-opacity-70 text-white text-center px-2 py-1 rounded-lg text-[10px] sm:text-sm md:text-base font-semibold shadow-md border border-white"
-          >
+          <div className="bg-black bg-opacity-70 text-white text-center px-2 py-1 rounded-lg text-[9px] sm:text-sm md:text-base font-semibold shadow-md border border-white">
             {pix.name}
           </div>
 
           <Image
             src={pix.img}
             alt={pix.name}
-            width={60}
-            height={60}
-            className="mt-[-8px] sm:mt-[-10px]"
+            width={40}
+            height={40}
+            className="mt-[-6px] sm:mt-[-10px] sm:w-[60px] sm:h-[60px]"
           />
         </div>
       ))}
