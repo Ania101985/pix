@@ -51,11 +51,11 @@ const pixItems = [
 
 export default function MapWithPix() {
   return (
-    <section className="relative w-full h-[90vh] sm:h-[70vh] my-12 overflow-hidden">
+    <section className="relative w-full max-w-5xl mx-auto aspect-[3/4] sm:aspect-[16/9] my-12">
       <img
         src="/map2aa.png"
         alt="Mapa Pix"
-        className="absolute inset-0 w-full h-full object-contain z-0"
+        className="absolute inset-0 w-full h-full object-cover z-0"
       />
 
       {pixItems.map((pix, index) => (
