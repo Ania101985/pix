@@ -1,4 +1,4 @@
-'use client'; // Ensure this is a client component for interactivity
+'use client';
 
 import { useState } from 'react';
 import Image from 'next/image';
@@ -63,10 +63,6 @@ const pixItems = [
 export default function MapWithPix() {
   const [activeTooltip, setActiveTooltip] = useState(null);
 
-  const handleLabelClick = (index) => {
-    setActiveTooltip(activeTooltip === index ? null : index);
-  };
-
   return (
     <section className="relative w-full aspect-[3/4] sm:aspect-[16/9] my-12">
       <img
@@ -85,17 +81,21 @@ export default function MapWithPix() {
             transform: 'translate(-50%, -50%)',
           }}
         >
-          {/* Label and tooltip */}
-          <div className="relative group">
+          {/* Tooltip wrapper */}
+          <div className="relative">
+            {/* Label with focus + hover */}
             <div
-              className="bg-black bg-opacity-70 text-white text-center px-2 py-1 rounded-lg text-[9px] sm:text-sm md:text-base font-semibold shadow-md border border-white cursor-pointer"
-              onClick={() => handleLabelClick(index)}
-              onMouseEnter={() => setActiveTooltip(index)} // for desktop
-              onMouseLeave={() => setActiveTooltip(null)}  // for desktop
+              tabIndex={0}
+              className="bg-black bg-opacity-70 text-white text-center px-2 py-1 rounded-lg text-[9px] sm:text-sm md:text-base font-semibold shadow-md border border-white outline-none focus:ring-2 ring-white cursor-pointer"
+              onMouseEnter={() => setActiveTooltip(index)}
+              onMouseLeave={() => setActiveTooltip(null)}
+              onFocus={() => setActiveTooltip(index)}
+              onBlur={() => setActiveTooltip(null)}
             >
               {pix.name}
             </div>
 
+            {/* Tooltip (shown if active) */}
             {activeTooltip === index && (
               <div className="absolute bottom-full mb-1 left-1/2 -translate-x-1/2 bg-white text-black text-xs p-2 rounded shadow-lg w-40 text-center z-20 transition-opacity duration-200">
                 {pix.tooltip}
@@ -103,6 +103,7 @@ export default function MapWithPix() {
             )}
           </div>
 
+          {/* Icon image */}
           <Image
             src={pix.img}
             alt={pix.name}
