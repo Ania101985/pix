@@ -2,7 +2,7 @@
 import Image from 'next/image';
 
 const pixItems = [
-  { name: 'SCRATCHJR', img: '/images/pixlabel2/pixlabel1.png', style: { top: '79%', left: '35%' } },
+  { name: 'SCRATCHJR', img: '/images/pixlabel2/pixlabel1.png', style: { top: '79%', left: '32%' } },
   { name: 'SCRATCH INTERMEDIO', img: '/images/pixlabel2/pixlabel2.png', style: { top: '57%', left: '57%' } },
   { name: 'ALFABETIZACIÓN DIGITAL', img: '/images/pixlabel2/pixlabel3.png', style: { top: '82%', left: '55%' } },
   { name: 'MAKECODE ARCADE', img: '/images/pixlabel2/pixlabel4.png', style: { top: '16%', left: '62%' } },
