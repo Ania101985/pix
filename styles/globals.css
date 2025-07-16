@@ -12,6 +12,20 @@ body {
   @apply text-gray-800 bg-white antialiased;
 }
 
+/* Prevent horizontal scroll */
+html, body {
+  overflow-x: hidden;
+}
+
+/* ========== Custom layout fix for map ========== */
+.map-page-container {
+  padding-top: 80px; /* Adjust if your navbar is taller */
+  height: calc(100vh - 80px);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
 /* ========== Animaciones personalizadas ========== */
 
 /* Wiggle */

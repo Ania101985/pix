@@ -10,7 +10,7 @@ export default function Document() {
           href="https://fonts.googleapis.com/css2?family=Audiowide&family=Comic+Neue:wght@400;700&display=swap"
           rel="stylesheet"
         />
-        {/* Meta adicional si deseas */}
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="theme-color" content="#ffffff" />
       </Head>
       <body className="font-sans">
