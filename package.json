@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "@fontsource/orbitron": "^5.2.6",
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "aos": "^2.3.4",
     "autoprefixer": "^10.4.17",
     "framer-motion": "^12.23.5",
