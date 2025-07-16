@@ -51,11 +51,11 @@ const pixItems = [
 
 export default function MapWithPix() {
   return (
-    <div className="map-page-container font-sans">
+    <div className="relative w-full h-[800px] sm:h-[1000px] overflow-hidden font-sans my-16">
       <img
         src="/map2aa.png"
         alt="Mapa Pix"
-        className="absolute top-0 left-0 w-full h-full object-cover z-10"
+        className="w-full h-full object-cover"
       />
 
       {pixItems.map((pix, index) => (
@@ -68,7 +68,7 @@ export default function MapWithPix() {
             transform: 'translate(-50%, -50%)',
           }}
         >
-          {/* Label */}
+          {/* Cartel */}
           <div
             className="flex items-center justify-center text-white font-bold text-center border-white border-[2px] rounded-xl px-2 shadow-lg backdrop-blur-md"
             style={{
@@ -82,7 +82,7 @@ export default function MapWithPix() {
             {pix.name}
           </div>
 
-          {/* Pix Image */}
+          {/* Imagen del Pix */}
           <Image
             src={pix.img}
             alt={pix.name}
