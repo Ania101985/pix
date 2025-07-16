@@ -1,8 +1,15 @@
 // components/Navbar.js
-import { useState } from 'react';
+'use client'; // Ensures client-side hydration (important in App Router too)
+
+import { useEffect, useState } from 'react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true); // avoid hydration mismatch
+  }, []);
 
   const toggleMenu = () => setIsOpen(!isOpen);
 
@@ -31,8 +38,8 @@ export default function Navbar() {
         </button>
       </div>
 
-      {/* Mobile Menu Dropdown */}
-      {isOpen && (
+      {/* Mobile Dropdown Menu */}
+      {isClient && isOpen && (
         <ul className="md:hidden mt-2 flex flex-col space-y-2 px-4 text-gray-700 font-semibold bg-white shadow-inner pb-4">
           <li><a href="#hero" className="hover:text-purple-600">Inicio</a></li>
           <li><a href="#how-it-works" className="hover:text-purple-600">Cómo funciona</a></li>
