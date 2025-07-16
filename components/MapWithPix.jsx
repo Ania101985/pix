@@ -16,51 +16,52 @@ const pixItems = [
 
 export default function MapWithPix() {
   const imageRef = useRef(null);
-  const [imageSize, setImageSize] = useState({ width: 0, height: 0 });
-
-  const updateImageSize = () => {
-    if (imageRef.current) {
-      const img = imageRef.current;
-      setImageSize({
-        width: img.clientWidth,
-        height: img.clientHeight,
-      });
-    }
-  };
+  const [dimensions, setDimensions] = useState({ width: 0, height: 0 });
 
   useEffect(() => {
-    updateImageSize();
-    window.addEventListener('resize', updateImageSize);
-    return () => window.removeEventListener('resize', updateImageSize);
+    const updateSize = () => {
+      if (imageRef.current) {
+        setDimensions({
+          width: imageRef.current.clientWidth,
+          height: imageRef.current.clientHeight,
+        });
+      }
+    };
+
+    updateSize();
+    window.addEventListener('resize', updateSize);
+    return () => window.removeEventListener('resize', updateSize);
   }, []);
 
   return (
-    <div className="relative w-full max-w-[1200px] mx-auto my-16 px-4">
+    <div className="relative w-full max-w-6xl mx-auto my-16">
       <img
         ref={imageRef}
         src="/map2aa.png"
         alt="Mapa Pix"
         className="w-full h-auto"
-        onLoad={updateImageSize}
+        onLoad={() => {
+          if (imageRef.current) {
+            setDimensions({
+              width: imageRef.current.clientWidth,
+              height: imageRef.current.clientHeight,
+            });
+          }
+        }}
       />
 
-      {imageSize.width > 0 &&
-        pixItems.map((pix, index) => (
+      {dimensions.width > 0 &&
+        pixItems.map((pix, i) => (
           <div
-            key={index}
+            key={i}
             className="absolute flex flex-col items-center z-30"
             style={{
-              top: `${pix.top * imageSize.height}px`,
-              left: `${pix.left * imageSize.width}px`,
+              top: pix.top * dimensions.height,
+              left: pix.left * dimensions.width,
               transform: 'translate(-50%, -50%)',
             }}
           >
-            <div
-              className="text-white font-bold text-center border-white border-2 rounded-lg drop-shadow-md px-2 py-1 text-xs sm:text-sm bg-black/70 leading-tight max-w-[120px] whitespace-pre-wrap"
-              style={{
-                wordBreak: 'break-word',
-              }}
-            >
+            <div className="text-white font-bold text-center border-white border-2 rounded-lg drop-shadow-md px-2 py-1 text-[11px] sm:text-sm bg-black/70 max-w-[110px] leading-tight">
               {pix.name}
             </div>
             <Image
