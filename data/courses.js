@@ -4,7 +4,7 @@ const courses = [
   {
     title: 'Scratch Jr',
     slug: 'scratch-jr',
-    image: 'scratchjr.png',
+    image: 'scratchjr.jpg',
     description: 'Introduce a los niños en la programación visual con bloques grandes y divertidos.',
     level: 'Inicial',
     duration: '4 semanas',
@@ -12,7 +12,7 @@ const courses = [
   {
     title: 'Scratch',
     slug: 'scratch',
-    image: 'scratch.png',
+    image: 'scratchbasico.jpg',
     description: 'Aprende lógica de programación creando juegos, animaciones y proyectos interactivos.',
     level: 'Básico',
     duration: '6 semanas',
@@ -20,7 +20,7 @@ const courses = [
   {
     title: 'MakeCode Arcade',
     slug: 'makecode-arcade',
-    image: 'makecode.png',
+    image: 'makecodearcade.jpg',
     description: 'Diseña videojuegos tipo retro mientras aprendes programación real.',
     level: 'Intermedio',
     duration: '5 semanas',
@@ -28,7 +28,7 @@ const courses = [
   {
     title: 'App Inventor',
     slug: 'app-inventor',
-    image: 'appinventor.png',
+    image: 'appinventor.jpg',
     description: 'Crea aplicaciones móviles funcionales para Android con bloques.',
     level: 'Intermedio',
     duration: '6 semanas',
@@ -44,7 +44,7 @@ const courses = [
   {
     title: 'JavaScript',
     slug: 'javascript',
-    image: 'javascript.png',
+    image: 'javascript.jpg',
     description: 'Domina el lenguaje de la web y crea experiencias interactivas.',
     level: 'Avanzado',
     duration: '6 semanas',
@@ -52,7 +52,7 @@ const courses = [
   {
     title: 'Python',
     slug: 'python',
-    image: 'python.png',
+    image: 'python.jpg',
     description: 'Aprende uno de los lenguajes más populares para ciencia, web y automatización.',
     level: 'Avanzado',
     duration: '8 semanas',
