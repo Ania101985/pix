@@ -1,0 +1,43 @@
+.map-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.map-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.label {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  color: white;
+  font-size: 0.9rem;
+  line-height: 1.1rem;
+  padding: 0.3rem 0.5rem;
+  border-radius: 10px;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.pix-icon {
+  position: absolute;
+  transform: translate(-50%, 0);
+  width: 40px;
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .label {
+    font-size: 0.7rem;
+    line-height: 1rem;
+  }
+
+  .pix-icon {
+    width: 30px;
+  }
+}
