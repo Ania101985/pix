@@ -1,0 +1,10 @@
+{
+  "type": "dragdrop",
+  "props": {
+    "instructionKey": "activity.moveSpriteDrag.instruction",
+    "items": [
+      { "textKey": "activity.moveSpriteDrag.block1", "correctZone": "start" },
+      { "textKey": "activity.moveSpriteDrag.block2", "correctZone": "end" }
+    ]
+  }
+}

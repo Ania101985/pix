@@ -1,25 +1,30 @@
-// components/Hero.js
+import { useTranslation } from 'next-i18next';
 
+// components/Hero.js
 export default function Hero() {
+  const { t } = useTranslation('common');
+
   return (
     <section className="relative -mt-10 bg-gradient-to-r from-purple-600 via-pink-500 to-yellow-400 text-white py-20 px-6 overflow-hidden">
       {/* Content Container */}
       <div className="max-w-6xl mx-auto flex flex-col-reverse lg:flex-row items-center gap-12">
-        
+
         {/* Text Section */}
         <div className="lg:w-1/2 text-center lg:text-left">
           <h1 className="text-5xl lg:text-6xl font-extrabold mb-6 leading-tight drop-shadow-lg">
-            Aprende programación <br />{" "}
-            <span className="text-yellow-300">jugando desde los 6 años</span>
+            {t('hero.title_prefix')} <br />{" "}
+            <span className="text-yellow-300">{t('hero.title_highlight')}</span>
           </h1>
+
           <p className="text-lg lg:text-xl mb-8 drop-shadow-md">
-            Con cursos divertidos, retos gamificados y personajes que acompañan el aprendizaje, ¡los niños se convierten en creadores digitales!
+            {t('hero.subtitle_long')}
           </p>
+
           <a
             href="#cursos"
             className="inline-block bg-white text-purple-700 font-bold px-8 py-3 rounded-xl text-lg hover:bg-yellow-100 transition"
           >
-            🚀 Empieza la aventura
+            🚀 {t('hero.cta_adventure')}
           </a>
         </div>
 

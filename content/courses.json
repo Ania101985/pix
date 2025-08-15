@@ -1,0 +1,47 @@
+[
+  {
+    "id": "digital-literacy",
+    "titleKey": "course.digitalLiteracy",
+    "icon": "/icons/node1.jpg"
+  },
+  {
+    "id": "scratch-jr",
+    "titleKey": "course.scratchJr",
+    "icon": "/icons/node2.jpg"
+  },
+  {
+    "id": "scratch",
+    "titleKey": "course.scratch",
+    "icon": "/icons/node3.jpg"
+  },
+  {
+    "id": "makecode-arcade",
+    "titleKey": "course.makecode",
+    "icon": "/icons/node4.jpg"
+  },
+  {
+    "id": "app-inventor",
+    "titleKey": "course.appInventor",
+    "icon": "/icons/node5.jpg"
+  },
+  {
+    "id": "html-css",
+    "titleKey": "course.htmlCss",
+    "icon": "/icons/node6.jpg"
+  },
+  {
+    "id": "javascript",
+    "titleKey": "course.javascript",
+    "icon": "/icons/node7.jpg"
+  },
+  {
+    "id": "python",
+    "titleKey": "course.python",
+    "icon": "/icons/node8.jpg"
+  },
+  {
+    "id": "ai",
+    "titleKey": "course.ai",
+    "icon": "/icons/node9.jpg"
+  }
+]

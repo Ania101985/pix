@@ -1,8 +1,10 @@
+import { useTranslation } from 'next-i18next';
 // components/CourseLabel.jsx
 import { motion } from "framer-motion";
 import { useRouter } from "next/router";
 
 export default function CourseLabel({ name, styleClass, x, y, href }) {
+  const { t } = useTranslation('common');
   const router = useRouter();
 
   return (

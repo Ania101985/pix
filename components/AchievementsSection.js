@@ -1,33 +1,38 @@
-// components/AchievementsSection.js
+import { useTranslation } from 'next-i18next';
 
+// components/AchievementsSection.js
 export default function AchievementsSection() {
+  const { t } = useTranslation('common');
+
   const achievements = [
     {
       icon: '🏅',
-      title: 'Explorador Digital',
-      description: 'Completó su primer curso y comenzó su viaje en la programación.',
+      title: t('achievements.items.1.title'),
+      description: t('achievements.items.1.description'),
     },
     {
       icon: '🧠',
-      title: 'Ninja del Código',
-      description: 'Superó retos lógicos y dominó la programación con bloques.',
+      title: t('achievements.items.2.title'),
+      description: t('achievements.items.2.description'),
     },
     {
       icon: '🚀',
-      title: 'Maestro Creativo',
-      description: 'Publicó su primer proyecto de videojuego o app.',
+      title: t('achievements.items.3.title'),
+      description: t('achievements.items.3.description'),
     },
     {
       icon: '💡',
-      title: 'Lógico Avanzado',
-      description: 'Aplicó estructuras condicionales y bucles en sus proyectos.',
+      title: t('achievements.items.4.title'),
+      description: t('achievements.items.4.description'),
     },
   ];
 
   return (
     <section className="py-24 px-6 bg-gradient-to-r from-pink-600 via-purple-700 to-blue-600 text-white">
       <div className="max-w-6xl mx-auto text-center">
-        <h2 className="text-4xl font-extrabold mb-12">Logros y Niveles</h2>
+        <h2 className="text-4xl font-extrabold mb-12">
+          {t('achievements.section_title')}
+        </h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
           {achievements.map((item, index) => (

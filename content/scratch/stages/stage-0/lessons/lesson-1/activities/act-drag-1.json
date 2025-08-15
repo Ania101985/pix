@@ -1,0 +1,7 @@
+{
+  "type": "dragdrop",
+  "props": {
+    "items": ["Sky", "Forest", "Ocean"],
+    "targets": ["Background slot"]
+  }
+}

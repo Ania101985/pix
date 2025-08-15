@@ -1,0 +1,10 @@
+{
+  "type": "quiz",
+  "props": {
+    "questionKey": "activity.moveSpriteQuiz.question",
+    "options": [
+      { "textKey": "activity.moveSpriteQuiz.opt1", "correct": true },
+      { "textKey": "activity.moveSpriteQuiz.opt2", "correct": false }
+    ]
+  }
+}

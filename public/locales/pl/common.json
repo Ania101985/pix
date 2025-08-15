@@ -1,0 +1,85 @@
+{
+  "head": {
+    "title": "Pix Adventures – Ucz się, bawiąc",
+    "description": "Platforma z elementami grywalizacji do nauki programowania od 6. roku życia"
+  },
+  "nav": {
+    "home": "Strona główna",
+    "how": "Jak to działa",
+    "courses": "Kursy",
+    "pricing": "Cennik",
+    "testimonials": "Opinie",
+    "faq": "FAQ",
+    "contact": "Kontakt"
+  },
+  "hero": {
+    "title_prefix": "Ucz się programować",
+    "title_highlight": "bawiąc się od 6. roku życia",
+    "subtitle_long": "Dzięki zabawnym kursom, wyzwaniom z grywalizacją i postaciom prowadzącym w podróży, dzieci stają się twórcami cyfrowymi!",
+    "cta_adventure": "Rozpocznij przygodę",
+    "title": "Ucz się programowania przez zabawę",
+    "subtitle": "Interaktywne przygody dla dzieci 6+",
+    "cta_primary": "Zacznij za darmo",
+    "cta_secondary": "Zobacz jak to działa"
+  },
+  "how": {
+    "section_title": "Jak to działa",
+    "subtitle_long": "W Pix Adventures nauka programowania jest zabawna, prowadzona i spersonalizowana.",
+    "steps": {
+      "1": {
+        "title": "1. Wybierz kurs",
+        "text": "Przygody dostosowane do wieku i poziomu dziecka. Każdy kurs zaczyna się wciągającą historią."
+      },
+      "2": {
+        "title": "2. Ucz się przez zabawę",
+        "text": "Wykonuj misje i wyzwania w interaktywnych światach, ucząc się krok po kroku."
+      },
+      "3": {
+        "title": "3. Śledź postępy",
+        "text": "Rodzice i nauczyciele mogą śledzić postępy, osiągnięcia i otrzymywać spersonalizowane wskazówki."
+      }
+    }
+  },
+  "courses": {
+    "title": "Nasze kursy"
+  },
+  "course": {
+    "digitalLiteracy": { "title": "Kompetencje cyfrowe" },
+    "scratchJr": { "title": "Scratch Jr" },
+    "scratch": { "title": "Scratch" },
+    "makecode": { "title": "MakeCode Arcade" },
+    "appInventor": { "title": "App Inventor" },
+    "htmlCss": { "title": "HTML i CSS" },
+    "javascript": { "title": "JavaScript" },
+    "python": { "title": "Python" },
+    "ai": { "title": "Sztuczna inteligencja" }
+  },
+  "stage": {
+    "jungleScratch": "Dżungla Scratcha",
+    "cityPython": "Miasto Pythona"
+  },
+  "lesson": {
+    "moveSprite": "Porusz duszkiem",
+    "changeBackground": "Zmień tło"
+  },
+  "quiz": {
+    "moveSprite": {
+      "q1": "Który przycisk uruchamia projekt?"
+    }
+  },
+  "pricing": {
+    "section_title": "Wybierz swoją przygodę",
+    "section_subtitle": "Plany stworzone do nauki przez zabawę w domu",
+    "most_popular": "Najpopularniejsze",
+    "select_plan": "Wybierz plan"
+  },
+  "footer": {
+    "rights": "Wszelkie prawa zastrzeżone",
+    "tagline": "Ucz się programowania przez zabawę dzięki zabawnym, grywalizowanym kursom dla dzieci.",
+    "navTitle": "Nawigacja",
+    "followTitle": "Śledź nas",
+    "subscribeTitle": "Subskrybuj",
+    "emailPlaceholder": "Twój e-mail",
+    "subscribeCta": "Otrzymuj aktualizacje"
+  }
+}

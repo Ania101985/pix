@@ -1,4 +1,7 @@
+import { useTranslation } from 'next-i18next';
+
 export default function MapPreview() {
+  const { t } = useTranslation('common');
   return (
     <section className="py-12 px-6 bg-purple-50 text-center">
       <h3 className="text-3xl font-bold text-purple-700 mb-4">Un Mundo Gamificado Espera</h3>

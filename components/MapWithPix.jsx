@@ -1,4 +1,5 @@
 'use client';
+import { useTranslation } from 'next-i18next';
 
 import { useState } from 'react';
 import Image from 'next/image';
@@ -61,6 +62,7 @@ const pixItems = [
 ];
 
 export default function MapWithPix() {
+  const { t } = useTranslation('common');
   const [activeTooltip, setActiveTooltip] = useState(null);
 
   return (

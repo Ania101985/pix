@@ -1,67 +1,71 @@
-'use client';
+import Link from 'next/link';
+import { useTranslation } from 'next-i18next';
+import { useRouter } from 'next/router';
+import { FaHome } from 'react-icons/fa';
 
-import { useEffect, useRef, useState } from 'react';
-import { useRouter } from 'next/router'; // Optional for route navigation
-
+// components/Navbar.js
 export default function Navbar() {
-  const [isOpen, setIsOpen] = useState(false);
-  const menuRef = useRef(null);
+  const { t } = useTranslation('common');
+  const router = useRouter();
+  const { locale, pathname, query, asPath } = router;
 
-  // Close menu on outside click
-  useEffect(() => {
-    const handleClickOutside = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
-        setIsOpen(false);
-      }
-    };
-    document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
-  }, []);
-
-  // Close menu on link click
-  const handleMenuClick = () => setIsOpen(false);
+  const changeLocale = (e) => {
+    const next = e.target.value;
+    if (next && next !== locale) {
+      router.push({ pathname, query }, asPath, { locale: next });
+    }
+  };
 
   return (
-    <nav className="sticky top-0 bg-white shadow-md z-50 px-4 py-3">
-      <div className="max-w-7xl mx-auto flex justify-between items-center relative">
-        {/* Logo */}
-        <div className="text-xl sm:text-2xl font-bold text-purple-700">
+    <nav className="fixed top-0 inset-x-0 z-50 bg-white/80 backdrop-blur border-b">
+      <div className="max-w-7xl mx-auto px-4 h-16 flex items-center justify-between">
+        {/* Brand (unchanged) */}
+        <Link href="/" className="font-extrabold text-purple-700">
           Pix Adventures
-        </div>
+        </Link>
 
-        {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-6 text-gray-700 font-semibold">
-          <li><a href="#hero" className="hover:text-purple-600">Inicio</a></li>
-          <li><a href="#how-it-works" className="hover:text-purple-600">Cómo funciona</a></li>
-          <li><a href="#cursos" className="hover:text-purple-600">Cursos</a></li>
-          <li><a href="#precios" className="hover:text-purple-600">Precios</a></li>
-          <li><a href="#faq" className="hover:text-purple-600">FAQ</a></li>
-        </ul>
-
-        {/* Mobile Toggle */}
-        <div className="md:hidden relative" ref={menuRef}>
-          <button
-            onClick={() => setIsOpen(!isOpen)}
-            className="text-2xl text-gray-700 focus:outline-none"
-            aria-label="Toggle menu"
+        {/* Links */}
+        <div className="flex items-center gap-6 text-sm font-medium">
+          {/* Home icon instead of text */}
+          <Link
+            href="/"
+            aria-label={t('nav.home')}
+            title={t('nav.home')}
+            className="hover:text-purple-700"
           >
-            ☰
-          </button>
+            <FaHome className="text-lg" />
+          </Link>
 
-          {/* Mobile Menu */}
-          <div
-            className={`absolute right-0 mt-2 w-44 bg-white rounded-md shadow-lg py-2 text-sm text-gray-700 font-semibold z-50 transition-all duration-200 origin-top-right transform ${
-              isOpen ? 'scale-100 opacity-100' : 'scale-95 opacity-0 pointer-events-none'
-            }`}
+          {/* Use a dedicated key for this label */}
+          <Link href="#como-funciona" className="hover:text-purple-700">
+            {t('nav.how')}
+          </Link>
+
+          <Link href="#cursos" className="hover:text-purple-700">
+            {t('nav.courses')}
+          </Link>
+          <Link href="#pricing" className="hover:text-purple-700">
+            {t('nav.pricing')}
+          </Link>
+          <Link href="#testimonials" className="hover:text-purple-700">
+            {t('nav.testimonials')}
+          </Link>
+          <Link href="#faq" className="hover:text-purple-700">
+            {t('nav.faq')}
+          </Link>
+
+          {/* Language list (no globe) */}
+          <select
+            value={locale || 'es'}
+            onChange={changeLocale}
+            className="ml-2 text-xs rounded-full border px-3 py-1 bg-white hover:bg-gray-50 cursor-pointer"
+            aria-label="Select language"
+            title="Select language"
           >
-            <ul onClick={handleMenuClick}>
-              <li><a href="#hero" className="block px-4 py-2 hover:bg-purple-100">Inicio</a></li>
-              <li><a href="#how-it-works" className="block px-4 py-2 hover:bg-purple-100">Cómo funciona</a></li>
-              <li><a href="#cursos" className="block px-4 py-2 hover:bg-purple-100">Cursos</a></li>
-              <li><a href="#precios" className="block px-4 py-2 hover:bg-purple-100">Precios</a></li>
-              <li><a href="#faq" className="block px-4 py-2 hover:bg-purple-100">FAQ</a></li>
-            </ul>
-          </div>
+            <option value="es">🇪🇸 ES</option>
+            <option value="en">🇬🇧 EN</option>
+            <option value="pl">🇵🇱 PL</option>
+          </select>
         </div>
       </div>
     </nav>

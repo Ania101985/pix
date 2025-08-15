@@ -1,0 +1,77 @@
+{
+  "head": {
+    "title": "Pix Adventures – Learn by playing",
+    "description": "A gamified platform to learn coding from age 6"
+  },
+  "nav": {
+    "home": "Home",
+    "how": "How it works",
+    "courses": "Courses",
+    "pricing": "Pricing",
+    "testimonials": "Testimonials",
+    "faq": "FAQ",
+    "contact": "Contact"
+  },
+  "hero": {
+    "title_prefix": "Learn coding",
+    "title_highlight": "by playing from age 6",
+    "subtitle_long": "With fun courses, gamified challenges, and characters guiding the journey, kids become digital creators!",
+    "cta_adventure": "Start the adventure",
+    "title": "Learn coding by playing",
+    "subtitle": "Interactive adventures for kids aged 6+",
+    "cta_primary": "Start free",
+    "cta_secondary": "See how it works"
+  },
+  "how": {
+    "section_title": "How it works",
+    "subtitle_long": "In Pix Adventures, learning to code is fun, guided, and personalized.",
+    "steps": {
+      "1": {
+        "title": "1. Choose a course",
+        "text": "Adventures tailored to your child’s age and level. Each course begins with a captivating story."
+      },
+      "2": {
+        "title": "2. Learn by playing",
+        "text": "Complete missions and challenges in interactive worlds while learning coding step by step."
+      },
+      "3": {
+        "title": "3. Track progress",
+        "text": "Parents and educators can follow progress, achievements, and receive personalized suggestions."
+      }
+    }
+  },
+  "courses": {
+    "title": "Our Courses"
+  },
+  "course": {
+    "digitalLiteracy": { "title": "Digital Literacy" },
+    "scratchJr": { "title": "Scratch Jr" },
+    "scratch": { "title": "Scratch" },
+    "makecode": { "title": "MakeCode Arcade" },
+    "appInventor": { "title": "App Inventor" },
+    "htmlCss": { "title": "HTML & CSS" },
+    "javascript": { "title": "JavaScript" },
+    "python": { "title": "Python" },
+    "ai": { "title": "Artificial Intelligence" }
+  },
+  "stage": {
+    "jungleScratch": "Jungle of Scratch",
+    "cityPython": "City of Python"
+  },
+  "lesson": {
+    "moveSprite": "Move the Sprite",
+    "changeBackground": "Change the Background"
+  },
+  "quiz": {
+    "moveSprite": {
+      "q1": "Which button starts the project?"
+    }
+  },
+  "pricing": {
+    "section_title": "Choose your Adventure",
+    "section_subtitle": "Plans designed for learning through play at home",
+    "most_popular": "Most popular",
+    "select_plan": "Choose plan"
+  },
+  "footer": {
+    "rights": "All rights reserved",

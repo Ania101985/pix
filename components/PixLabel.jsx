@@ -1,7 +1,8 @@
+import { useTranslation } from 'next-i18next';
 // components/PixLabel.jsx
 import Image from "next/image";
-
 export default function PixLabel({ text = "SCRATCHJR", x = "20%", y = "70%" }) {
+  const { t } = useTranslation('common');
   return (
     <div
       className="absolute"

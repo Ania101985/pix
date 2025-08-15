@@ -1,0 +1,6 @@
+[
+  { "lessonId": "demo-1", "courseId": "demo", "stageIndex": 0, "indexInStage": 0, "titleKey": "lesson.1", "activityIds": ["act-quiz-1"] },
+  { "lessonId": "demo-2", "courseId": "demo", "stageIndex": 0, "indexInStage": 1, "titleKey": "lesson.2", "activityIds": ["act-drag-1"] },
+  { "lessonId": "demo-3", "courseId": "demo", "stageIndex": 0, "indexInStage": 2, "titleKey": "lesson.3", "activityIds": ["act-iframe-1"] },
+  { "lessonId": "demo-4", "courseId": "demo", "stageIndex": 0, "indexInStage": 3, "titleKey": "lesson.4", "activityIds": ["act-quiz-1","act-drag-1"] }
+]

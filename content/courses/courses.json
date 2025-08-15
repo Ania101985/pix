@@ -1,0 +1,22 @@
+[
+  {
+    "id": "scratch",
+    "title": "Scratch Basics",
+    "icon": "/icons/scratch.png",
+    "mapBg": "/maps/general-map.png",
+    "courseMapBg": "/maps/scratch-world.png",
+    "stagesFile": "/content/scratch/stages.json",
+    "lessonsFile": "/content/scratch/lessons.json",
+    "premium": false
+  },
+  {
+    "id": "python",
+    "title": "Python Adventures",
+    "icon": "/icons/python.png",
+    "mapBg": "/maps/general-map.png",
+    "courseMapBg": "/maps/python-world.png",
+    "stagesFile": "/content/python/stages.json",
+    "lessonsFile": "/content/python/lessons.json",
+    "premium": true
+  }
+]

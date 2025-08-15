@@ -1,0 +1,11 @@
+{
+  "lessonId": "scratch-0-0",
+  "courseId": "scratch",
+  "stageIndex": 0,
+  "indexInStage": 0,
+  "titleKey": "lesson.moveSprite",
+  "activityIds": [
+    "activity-moveSpriteQuiz",
+    "activity-moveSpriteDrag"
+  ]
+}

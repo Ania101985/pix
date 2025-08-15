@@ -1,0 +1,85 @@
+{
+  "head": {
+    "title": "Pix Adventures – Aprende jugando",
+    "description": "Una plataforma gamificada para aprender a programar desde los 6 años"
+  },
+  "nav": {
+    "home": "Inicio",
+    "how": "Cómo funciona",
+    "courses": "Cursos",
+    "pricing": "Precios",
+    "testimonials": "Testimonios",
+    "faq": "Preguntas frecuentes",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "title_prefix": "Aprende a programar",
+    "title_highlight": "jugando desde los 6 años",
+    "subtitle_long": "Con cursos divertidos, retos gamificados y personajes que guían el camino, ¡los niños se convierten en creadores digitales!",
+    "cta_adventure": "Comienza la aventura",
+    "title": "Aprende a programar jugando",
+    "subtitle": "Aventuras interactivas para niños desde 6+",
+    "cta_primary": "Empieza gratis",
+    "cta_secondary": "Ver cómo funciona"
+  },
+  "how": {
+    "section_title": "Cómo funciona",
+    "subtitle_long": "En Pix Adventures, aprender a programar es divertido, guiado y personalizado.",
+    "steps": {
+      "1": {
+        "title": "1. Elige un curso",
+        "text": "Aventuras adaptadas a la edad y nivel de tu hijo. Cada curso comienza con una historia cautivadora."
+      },
+      "2": {
+        "title": "2. Aprende jugando",
+        "text": "Completa misiones y retos en mundos interactivos mientras aprendes paso a paso."
+      },
+      "3": {
+        "title": "3. Sigue el progreso",
+        "text": "Padres y educadores pueden seguir el progreso, logros y recibir sugerencias personalizadas."
+      }
+    }
+  },
+  "courses": {
+    "title": "Nuestros Cursos"
+  },
+  "course": {
+    "digitalLiteracy": { "title": "Alfabetización Digital" },
+    "scratchJr": { "title": "Scratch Jr" },
+    "scratch": { "title": "Scratch" },
+    "makecode": { "title": "MakeCode Arcade" },
+    "appInventor": { "title": "App Inventor" },
+    "htmlCss": { "title": "HTML & CSS" },
+    "javascript": { "title": "JavaScript" },
+    "python": { "title": "Python" },
+    "ai": { "title": "Inteligencia Artificial" }
+  },
+  "stage": {
+    "jungleScratch": "Selva de Scratch",
+    "cityPython": "Ciudad de Python"
+  },
+  "lesson": {
+    "moveSprite": "Mover el Sprite",
+    "changeBackground": "Cambiar el Fondo"
+  },
+  "quiz": {
+    "moveSprite": {
+      "q1": "¿Qué botón inicia el proyecto?"
+    }
+  },
+  "pricing": {
+    "section_title": "Elige tu aventura",
+    "section_subtitle": "Planes diseñados para aprender jugando en casa",
+    "most_popular": "Más popular",
+    "select_plan": "Elegir plan"
+  },
+  "footer": {
+    "rights": "Todos los derechos reservados",
+    "tagline": "Aprende a programar jugando con cursos divertidos y gamificados para niños.",
+    "navTitle": "Navegación",
+    "followTitle": "Síguenos",
+    "subscribeTitle": "Suscríbete",
+    "emailPlaceholder": "Tu email",
+    "subscribeCta": "Recibir actualizaciones"
+  }
+}

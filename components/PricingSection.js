@@ -1,43 +1,47 @@
+import { useTranslation } from 'next-i18next';
+
 export default function PricingSection() {
+  const { t } = useTranslation('common');
+
   const plans = [
     {
-      name: "Explorador",
-      price: "€30/mes",
-      description: "Comienza tu aventura con lo esencial",
-      color: "from-yellow-400 to-orange-300",
+      name: t('pricing.plans.explorer.name'),
+      price: t('pricing.plans.explorer.price'),
+      description: t('pricing.plans.explorer.description'),
+      color: 'from-yellow-400 to-orange-300',
       benefits: [
-        "1 curso activo",
-        "Acceso a juegos educativos",
-        "Soporte por email",
+        t('pricing.plans.explorer.benefits.1'),
+        t('pricing.plans.explorer.benefits.2'),
+        t('pricing.plans.explorer.benefits.3'),
       ],
-      icon: "🧭",
+      icon: '🧭',
     },
     {
-      name: "Aventurero",
-      price: "€29/mes",
-      description: "Desbloquea todos los retos",
-      color: "from-purple-500 to-fuchsia-500",
+      name: t('pricing.plans.adventurer.name'),
+      price: t('pricing.plans.adventurer.price'),
+      description: t('pricing.plans.adventurer.description'),
+      color: 'from-purple-500 to-fuchsia-500',
       benefits: [
-        "Acceso ilimitado a todos los cursos",
-        "Retos gamificados",
-        "Soporte prioritario",
-        "Certificados digitales",
+        t('pricing.plans.adventurer.benefits.1'),
+        t('pricing.plans.adventurer.benefits.2'),
+        t('pricing.plans.adventurer.benefits.3'),
+        t('pricing.plans.adventurer.benefits.4'),
       ],
-      icon: "🧗",
+      icon: '🧗',
       popular: true,
     },
     {
-      name: "Familiar",
-      price: "€49/mes",
-      description: "La experiencia completa para toda la familia",
-      color: "from-sky-500 to-blue-400",
+      name: t('pricing.plans.family.name'),
+      price: t('pricing.plans.family.price'),
+      description: t('pricing.plans.family.description'),
+      color: 'from-sky-500 to-blue-400',
       benefits: [
-        "Hasta 3 perfiles de niños",
-        "Todo lo del Plan Aventurero",
-        "Seguimiento para padres",
-        "Sesiones en vivo semanales",
+        t('pricing.plans.family.benefits.1'),
+        t('pricing.plans.family.benefits.2'),
+        t('pricing.plans.family.benefits.3'),
+        t('pricing.plans.family.benefits.4'),
       ],
-      icon: "🏠",
+      icon: '🏠',
     },
   ];
 
@@ -45,10 +49,10 @@ export default function PricingSection() {
     <section className="relative py-20 bg-[url('/hero-pattern.svg')] bg-white bg-repeat text-gray-800">
       <div className="max-w-7xl mx-auto px-6 text-center">
         <h2 className="text-4xl font-extrabold text-purple-700 mb-4 drop-shadow-md">
-          🗺️ Elige tu Aventura
+          🗺️ {t('pricing.section_title')}
         </h2>
         <p className="mb-12 text-lg text-gray-600">
-          Planes pensados para aprender jugando desde casa
+          {t('pricing.section_subtitle')}
         </p>
 
         <div className="grid md:grid-cols-3 gap-10">
@@ -59,7 +63,7 @@ export default function PricingSection() {
             >
               {plan.popular && (
                 <div className="absolute top-0 right-0 bg-white text-purple-700 text-xs font-bold px-3 py-1 rounded-bl-xl shadow">
-                  Más popular
+                  {t('pricing.most_popular')}
                 </div>
               )}
 
@@ -77,7 +81,7 @@ export default function PricingSection() {
               </ul>
 
               <button className="bg-white text-purple-700 font-bold py-2 px-6 rounded-full shadow hover:bg-purple-100 transition">
-                Elegir plan
+                {t('pricing.select_plan')}
               </button>
             </div>
           ))}

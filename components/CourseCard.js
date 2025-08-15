@@ -1,5 +1,5 @@
+import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
-
 const levelStyles = {
   Inicial: {
     color: 'bg-green-400',
@@ -20,6 +20,7 @@ const levelStyles = {
 };
 
 export default function CourseCard({ title, image, slug, level = 'Básico' }) {
+  const { t } = useTranslation('common');
   const levelInfo = levelStyles[level] || levelStyles['Básico'];
 
   return (

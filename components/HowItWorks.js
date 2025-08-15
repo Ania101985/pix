@@ -1,7 +1,9 @@
+import { useTranslation } from 'next-i18next';
 import { FaCompass, FaGamepad, FaChartLine } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 
 export default function HowItWorks() {
+  const { t } = useTranslation('common');
   return (
     <section id="como-funciona" className="bg-white py-20 text-center">
       <div className="max-w-6xl mx-auto px-4">
@@ -12,7 +14,8 @@ export default function HowItWorks() {
           viewport={{ once: true }}
           className="text-4xl font-extrabold text-purple-800 mb-4 flex items-center justify-center gap-2"
         >
-          🎯 ¿Cómo funciona?
+          {/* keep emoji + exact classes */}
+          🎯 {t('how.section_title')}
         </motion.h2>
 
         <motion.p
@@ -22,22 +25,22 @@ export default function HowItWorks() {
           viewport={{ once: true }}
           className="text-gray-600 text-lg max-w-xl mx-auto mb-14"
         >
-          En Pix Adventures, aprender programación es una aventura divertida, guiada y personalizada.
+          {t('how.subtitle_long')}
         </motion.p>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[{
             icon: <FaCompass className="text-2xl" />,
-            title: '1. Elige un curso',
-            text: 'Aventuras adaptadas según la edad y nivel de tu hijo. Cada curso comienza con una historia atrapante.',
+            title: t('how.steps.1.title'),
+            text: t('how.steps.1.text'),
           }, {
             icon: <FaGamepad className="text-2xl" />,
-            title: '2. Aprende jugando',
-            text: 'Completa misiones y retos en mundos interactivos, mientras aprendes programación paso a paso.',
+            title: t('how.steps.2.title'),
+            text: t('how.steps.2.text'),
           }, {
             icon: <FaChartLine className="text-2xl" />,
-            title: '3. Mide el progreso',
-            text: 'Padres y educadores pueden seguir avances, logros y recibir sugerencias personalizadas.',
+            title: t('how.steps.3.title'),
+            text: t('how.steps.3.text'),
           }].map((step, index) => (
             <motion.div
               key={index}
